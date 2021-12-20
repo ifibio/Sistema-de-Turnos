@@ -1,5 +1,5 @@
 function obtener_turnos() {
-  var origen = SpreadsheetApp.openById("12VZJEXQ5E_ioLlkFKBeXzu3Porx1Pu9gAtvDSpVrLTM").getSheetByName("Consulta de asistencias");
+  var origen = SpreadsheetApp.openById("ID_PLANILLA").getSheetByName("Consulta de asistencias");
   var sector_id = origen.getRange("D3").getDisplayValues();
   var desde = origen.getRange("B3").getDisplayValues();
   var hasta = origen.getRange("B6").getDisplayValues();
@@ -9,7 +9,7 @@ function obtener_turnos() {
   var events = cal.getEvents(new Date(desde), new Date(hasta));
 
 
-  var sheet = SpreadsheetApp.openById("12VZJEXQ5E_ioLlkFKBeXzu3Porx1Pu9gAtvDSpVrLTM").getSheetByName("Consulta de asistencias");
+  var sheet = SpreadsheetApp.openById("ID_PLANILLA").getSheetByName("Consulta de asistencias");
   // Uncomment this next line if you want to always clear the spreadsheet content before running - Note people could have added extra columns on the data though that would be lost
 
   var lastRow = sheet.getLastRow();
