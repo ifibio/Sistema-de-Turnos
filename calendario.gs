@@ -9,7 +9,7 @@ function asistencia(e) {
     // va a parar al calendario cuyo ID sale de la pestaña Sector
     // Obtener la planilla
     var ss = SpreadsheetApp.getActiveSpreadsheet(); // en dónde se ejecuta el script, podría hardcodear el ID y evitar ejecuciones en cualquier lado
-    // el ID de Actividades IFIBIO es: 12VZJEXQ5E_ioLlkFKBeXzu3Porx1Pu9gAtvDSpVrLTM
+    // el ID de Actividades IFIBIO es: 
     var sheet = ss.getSheetByName('Solicitud de Asistencia'); // de dónde salen los datos, me sirve por si quiero cambiar de dónde saco los valores. Por eso le puse el nombre
     // Chequear si hay datos y obtener la última fila con valores   
     var valoresA = sheet.getRange("B1:B").getValues(); // todos los valores de la columna B, yo usaria una columna que si o si deba estar
@@ -250,11 +250,11 @@ function asistencia(e) {
 function registro(e) {
   // Esta función dispara el aviso de registro en IFIBIO.
   if (e.range.getSheet().getName() == 'Datos de Usuarios') {
-    // el formulario es 1FAIpQLScRPulSwsoWHMUJpmzbwOR0cJWueQk0RtAgPHAIOpmXSbq1Eg
+    // el formulario es 
 
-    // Obtener la planilla 12VZJEXQ5E_ioLlkFKBeXzu3Porx1Pu9gAtvDSpVrLTM
-    var ss = SpreadsheetApp.openById('12VZJEXQ5E_ioLlkFKBeXzu3Porx1Pu9gAtvDSpVrLTM'); // en dónde se ejecuta el script, podría hardcodear el ID y evitar ejecuciones en cualquier lado
-    // el ID de Actividades IFIBIO es: 12VZJEXQ5E_ioLlkFKBeXzu3Porx1Pu9gAtvDSpVrLTM
+    // Obtener la planilla 
+    var ss = SpreadsheetApp.openById('ID_PLANILLA'); // en dónde se ejecuta el script, podría hardcodear el ID y evitar ejecuciones en cualquier lado
+    // el ID de Actividades IFIBIO es: 
     var sheet = ss.getSheetByName('Datos de Usuarios'); // de dónde salen los datos, me sirve por si quiero cambiar de dónde saco los valores. Por eso le puse el nombre
     // Chequear si hay datos y obtener la última fila con valores   
     var valoresA = sheet.getRange("B1:B").getValues(); // todos los valores de la columna B, yo usaria una columna que si o si deba estar
